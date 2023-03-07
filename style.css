@@ -20,6 +20,8 @@ body {
 				"left center right";
 		}
 
+		
+
 		header {
 			grid-area: header;
 			display: flex;
@@ -99,3 +101,16 @@ body {
 			height: auto;
 			display: block;
 		}
+/* #I want to make two rows instead of three in mobile view */
+@media only screen and (max-width: 767px) {
+	.container {
+	  grid-template-areas:
+		"header header"
+		"left center"
+		"right right";
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: repeat(3, auto);
+	}
+	}
+
+  
