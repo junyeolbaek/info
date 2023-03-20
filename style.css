@@ -1,121 +1,172 @@
+@font-face {
+	font-family: neue haas;
+	src: url(fonts/NeueHaasDisplay-Roman.ttf);
+}
+
+@font-face {
+	font-family: neue haas;
+	src: url(fonts/NeueHaasDisplay-Roman.otf);
+}
+
+@font-face {
+	font-family: neue haas;
+	src: url(./NeueHaasDisplay-Roman.ttf);
+}
+
+@font-face {
+	font-family: neue haas;
+	src: url(./NeueHaasDisplay-Roman.otf);
+}
 
 
-body {
-			font-family: helvetica, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: rgba(150, 206, 251, 0.457);
-			color: #13aa39;
-		}
+* {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(147, 201, 255);
+}
 
-		.container {
-			max-width: flex;
-			margin: 0;
-			padding: 10px;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: 1fr;
-			grid-template-areas: 
-				"header header header"
-				"left center right";
-		}
+
+.container {
+	display: grid;
+	height: 100vh;
+	grid-template-rows: 0.1fr 1fr;
+	grid-template-areas: 
+	"header"
+	"main";
+	font-family: neue haas;
+}
+
+a {
+	text-decoration: none;
+	font-family: sans-serif;
+	text-align: center;
+	color: rgb(7, 27, 178);
+}
+
+
+/*header area*/
+
+.header {
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+	"logo logo logo logo menu1 menu2 menu3 menu4";
+}
+
+.header #logo {
+	grid-area: logo;
+	font-size: 36px;
+	height: 50px;
+
+}
+
+/*content area*/
+
+.main {
+	display: grid;
+	grid-area: main;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 
+	"left center right";
+	
+	font-size: 14.5px;
+}
+
+
+
+/*left */
+
+.left_box {
+	display: grid;
+	grid-gap: 10px;
+	grid-area: left;
+	
+	height: 100vh;
+	position: sticky;
+	top: 0;
+	margin-right: 10px;
+
+}
+#logo {
+	margin-top: 3px;
+}
+
+#logo a {
+	color:#13aa39;
+	font-size: 24px;
+	padding: 10px;
+}
+
+
+/*middle */
+.center_box {
+	display: grid;
+	grid-gap: 10px;
+	grid-area: center;
+	
+	height: 100vh;
+	position: sticky;
+	top: 0;
+	margin: 0px;
+
+}
+#logo {
+	margin-top: 3px;
+}
+
+#logo a {
+	color:#13aa39;
+	font-size: 24px;
+	padding: 10px;
+}
+
+
+/*right */
+.right_box {
+	display: grid;
+	grid-gap: 10px;
+	grid-area: right;
+	
+	height: 100vh;
+	position: sticky;
+	top: 0;
+	margin-left: 10px;
+
+}
+#logo {
+	margin-top: 3px;
+}
+
+#logo a {
+	color:#13aa39;
+	font-size: 24px;
+	padding: 10px;
+}
+
+
+
+
+
+.image {
+	max-width: 100%;
+	margin-top: 20px;
+	
+}
+
 
 		
-
-		header {
-			grid-area: header;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 50px;
-			position : fixed;
-		}
-
-		nav ul {
-			display: flex;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-
-		nav ul li {
-			margin-left: 10px;
-			margin-right: 10px;
-		}
-
-		nav ul li a {
-			color: #13aa39;
-			text-decoration: none;
-		}
-
-		.left {
-			grid-area: left;
-			padding: 5px;
-		}
-
-		.center {
-			grid-area: center;
-			padding: 5px;
-		}
-
-		.right {
-			grid-area: right;
-			padding: 5px;
-		}
-
-		.image-box {
-			margin-bottom: 15px;
-		}
-
-		h1, h2 {
-			margin-top: 0;
-			margin-bottom: 0;
-			margin-left: 7px;
-		}
-
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-
-		ul li {
-			padding: 5px 0;
-			border-bottom: 1px solid #a8f5a3;
-		}
-
-		ul li:last-child {
-			border-bottom: 1px solid #b9fa95;
-		}
-
-		a {
-			color: #13aa39;
-			text-decoration: none;
-			text-decoration-line: none;
-			padding-left: 0px;
-			
-		}
-
-		img {
-			max-width: 100%;
-			height: auto;
-			display: block;
-		}
 /* #I want to make two rows instead of three in mobile view */
 @media only screen and (max-width: 767px) {
 	.container {
 	  grid-template-areas:
 		"header header"
-		"left center"
-		"right right";
-	  grid-template-columns: 1fr 1fr;
+		"left center right"
+	  grid-template-columns: 1fr 1fr 1fr;
 	  grid-template-rows: repeat(3, auto);
-	}
+	}}
 	@media screen and (max-width: 767px) {
 		body {font-size: 3vw;
 		
 		}
 	}
-
-  
-}
