@@ -31,8 +31,7 @@
 	height: 100vh;
 	grid-template-rows: 0.1fr 1fr;
 	grid-template-areas: 
-	"header"
-	"main";
+	"header" "main";
 	font-family: neue haas;
 }
 
@@ -40,24 +39,41 @@ a {
 	text-decoration: none;
 	font-family: sans-serif;
 	text-align: center;
-	color: rgb(7, 27, 178);
+	color: rgb(0, 0, 0);
 }
 
 
 /*header area*/
 
 .header {
-	grid-area: header;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-area: main;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: 
-	"logo logo logo logo menu1 menu2 menu3 menu4";
+	"header_text header_text";
+	background-color: rgba(111, 20, 202, 0);
+	font-size: 14px;
+}
+
+#header_text {
+	grid-area: header_text;
+	grid-template-columns: 0.3fr;
+	background-color: rgba(192, 51, 29, 0.032);
+	padding-top: 10px;
+	padding-left: 10px;
+	font-family: notosans_kr;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	
+	
 }
 
 .header #logo {
 	grid-area: logo;
 	font-size: 36px;
-	height: 50px;
+	height: 10px;
+	position: fixed;
+	background-color: rgba(0, 0, 255, 0);
+	padding-bottom: 10px;
 
 }
 
@@ -70,7 +86,7 @@ a {
 	grid-template-areas: 
 	"left center right";
 	
-	font-size: 14.5px;
+	font-size: 14px;
 }
 
 
@@ -78,7 +94,7 @@ a {
 /*left */
 
 .left_box {
-	display: grid;
+	display: ;
 	grid-gap: 10px;
 	grid-area: left;
 	
@@ -86,10 +102,11 @@ a {
 	position: sticky;
 	top: 0;
 	margin-right: 10px;
+	margin-left: 10px;
 
 }
 #logo {
-	margin-top: 3px;
+	margin-top: 10px;
 }
 
 #logo a {
@@ -101,7 +118,7 @@ a {
 
 /*middle */
 .center_box {
-	display: grid;
+	display: ;
 	grid-gap: 10px;
 	grid-area: center;
 	
@@ -112,7 +129,9 @@ a {
 
 }
 #logo {
-	margin-top: 3px;
+	margin-top: 10px;
+	text-decoration: underline;
+	text-decoration-color: rgb(255, 247, 0);
 }
 
 #logo a {
@@ -124,7 +143,7 @@ a {
 
 /*right */
 .right_box {
-	display: grid;
+	display: ;
 	grid-gap: 10px;
 	grid-area: right;
 	
@@ -132,16 +151,19 @@ a {
 	position: sticky;
 	top: 0;
 	margin-left: 10px;
+	margin-right: 10px;
 
 }
 #logo {
-	margin-top: 3px;
+	margin-top: -1px;
+	text-align: center;
 }
 
 #logo a {
-	color:#13aa39;
+	color:#000000;
 	font-size: 24px;
-	padding: 10px;
+	padding: 0px;
+	
 }
 
 
@@ -150,10 +172,23 @@ a {
 
 .image {
 	max-width: 100%;
-	margin-top: 20px;
+	margin-top: 10px;
+
 	
 }
 
+footer {
+	width: 100%;
+	height: 20px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(223, 243, 38);
+	background-color: rgba(12, 17, 151, 0.236);
+	
+}
 
 		
 /* #I want to make two rows instead of three in mobile view */
@@ -164,7 +199,8 @@ a {
 		"left center right"
 	  grid-template-columns: 1fr 1fr 1fr;
 	  grid-template-rows: repeat(3, auto);
-	}}
+	}
+}
 	@media screen and (max-width: 767px) {
 		body {font-size: 3vw;
 		
