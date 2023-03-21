@@ -255,17 +255,24 @@ footer {
 
 		
 /* #I want to make two rows instead of three in mobile view */
-@media only screen and (max-width: 767px) {
-	.container {
-	  grid-template-areas:
-		"header header"
-		"left center right"
-	  grid-template-columns: 1fr 1fr 1fr;
-	  grid-template-rows: repeat(3, auto);
-	}
-}
+
 	@media screen and (max-width: 767px) {
-		body {font-size: 3vw;
-		
+		body {font-size: 80%;
 		}
-	}
+		.header, .container, .left_box, .center_box, .right_box {
+			font-size: 12px;
+		  }
+		.header #header_text {font-size: 12px;
+			}
+
+		  .header #header_text,
+		  #logo a {
+			font-size: 12px;
+			
+		  }
+		
+		
+	
+		
+	
+		}
