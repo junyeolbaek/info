@@ -32,12 +32,13 @@
 	grid-template-rows: 0.1fr 1fr;
 	grid-template-areas: 
 	"header" "main";
-	font-family: neue haas;
+	font-family: 'Gothic A1', sans-serif;
+
 }
 
 a {
 	text-decoration: none;
-	font-family: sans-serif;
+	font-family: 'Gothic A1', sans-serif;
 	text-align: center;
 	color: rgb(0, 0, 0);
 }
@@ -46,7 +47,7 @@ a {
 /*header area*/
 
 .header {
-	grid-area: main;
+	grid-area: ;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: 
 	"header_text header_text";
@@ -57,12 +58,14 @@ a {
 #header_text {
 	grid-area: header_text;
 	grid-template-columns: 0.3fr;
-	background-color: rgba(192, 51, 29, 0.032);
+	background-color: rgba(224, 39, 11, 0);
 	padding-top: 10px;
 	padding-left: 10px;
 	font-family: notosans_kr;
 	color: rgb(0, 0, 0);
 	text-align: center;
+	font-size: 12px;
+	font-style: ;
 	
 	
 }
@@ -88,7 +91,6 @@ a {
 	
 	font-size: 14px;
 }
-
 
 
 /*left */
@@ -155,7 +157,7 @@ a {
 
 }
 #logo {
-	margin-top: -1px;
+	margin-top: -5px;
 	text-align: center;
 }
 
@@ -169,6 +171,60 @@ a {
 
 
 
+/*content pages*/
+.left_box, .center_box, .right_box {
+	height: 100px;
+  }
+
+/* divided grid for project description */
+.project-description {
+	display: flex;
+	justify-content: left;
+  }
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 0px;
+	margin-left: 0px;
+  }
+  
+  .col-md-6 {
+	position: relative;
+	width: %;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+  }
+  
+  /* image section */
+  .project-images {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+  }
+  
+  .col-md-3 {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+  }
+  
+  .project-images img {
+	width: 100%;
+	height:
+  }
+
+
+
+
+
+
+
+  
+  /* Image with caption */
 
 .image {
 	max-width: 100%;
@@ -176,6 +232,13 @@ a {
 
 	
 }
+
+
+
+
+
+
+/*footer*/
 
 footer {
 	width: 100%;
