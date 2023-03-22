@@ -22,7 +22,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	background-color: rgb(147, 201, 255);
+	background-color: rgb(255, 255, 255);
 }
 
 
@@ -276,3 +276,35 @@ footer {
 		
 	
 		}
+
+
+		@media screen and (min-width: 767px) {
+			body {font-size: 80%;
+			}
+			.header, .container, .left_box, .center_box, .right_box {
+				font-size: 12px;
+			  }
+			.header #header_text {font-size: 12px;
+				}
+	
+			  .header #header_text,
+			  #logo a {
+				font-size: 24px;
+				
+			  }
+			
+			
+		
+			
+		
+			}
+
+
+
+
+
+
+
+
+
+
