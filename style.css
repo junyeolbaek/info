@@ -214,12 +214,8 @@ a {
   
   .project-images img {
 	width: 100%;
-	height:
+	height: Auto;
   }
-
-
-
-
 
 
 
@@ -227,12 +223,15 @@ a {
   /* Image with caption */
 
 .image {
-	max-width: 100%;
+	max-width: 50%;
 	margin-top: 10px;
 
 	
 }
-
+.project-image {
+    /* max-width: 50%; */
+    height: auto;
+}
 
 
 
