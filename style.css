@@ -283,30 +283,35 @@ a:hover {
 ========================= */
 
 .info-page {
-  max-width: 720px;
+  max-width: 1040px;   /* .site, .site-header랑 동일 폭 */
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 20px;   /* 헤더 아래 살짝 여백 */
 }
 
 .info-page p,
 .info-page li {
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 12px;     /* 글자 조금 더 작게 (13 → 12) */
+  line-height: 1.5;
   color: #dcdcdc;
 }
 
+/* 소개 문단만 살짝 짧게, 하지만 왼쪽 정렬선은 같게 */
 .bio {
-  margin-bottom: 32px;
-  max-width: 540px; /* 더 좁혀서 에세이 같은 느낌 */
+  margin-bottom: 24px;
+  max-width: 640px;    /* 줄 길이만 줄이기 */
 }
 
 .info-page h3 {
-  margin: 30px 0 8px;
-  font-size: 12.5px;
+  margin: 24px 0 6px;
+  font-size: 11.5px;   /* 섹션 타이틀도 더 작게 */
   font-weight: 400;
   color: #f0f0f0;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: .4px;
+}
+
+.info-page section {
+  max-width: 640px;    /* 섹션 전체 줄 길이 제한 */
 }
 
 .info-page ul {
@@ -316,7 +321,7 @@ a:hover {
 }
 
 .info-page ul li {
-  padding: 4px 0;
+  padding: 3px 0;
   border-bottom: 1px solid #1a1a1a;
 }
 
