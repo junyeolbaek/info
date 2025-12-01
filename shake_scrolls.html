@@ -1,98 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Project 1</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&amp;display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Symbol_Hearts.png/640px-Symbol_Hearts.png">
+  <title>Shake and Scroll — Junyeol Baek</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Symbol_Hearts.png/640px-Symbol_Hearts.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-
 <body>
-	
-	<div class="container">
+<div class="site">
 
-		<div class="header">
-			<div id="header_text">
-				<h3><a href="#">🌐</a></h3>
-			</div>
-			
-			<div class="main">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-title"><a href="./index.html">Junyeol Baek</a></div>
+    <nav class="site-nav">
+      <a href="./info.html">Info</a>
+      <span> / </span>
+      <a href="https://www.instagram.com/ju.nyol/" target="_blank" rel="noopener">Instagram↗</a>
+    </nav>
+  </header>
 
-			<div class="left_box">
-				<div id="logo"><a href="./index.html">Junyeol Baek</a></div>
-			</div>
-							
-			<div class="center_box">
-				<div id="logo"><a href="./info.html">Info</a></div>
-			</div>
-				
-			<div class="right_box">
-				<div id="logo"><a href="https://www.instagram.com/ju.nyol/">Instagram</a></div>
-			</div>	
-		</div>	
-		
-		<div class="content">
-			
-		</div>	
-        <div class="project-description">
-            <div class="row">
-              <div class="col-md-6">
-                <h2>Shake and Scroll (2022)</h2>
-                <p>&nbsp</p>
-                <p>Creative coding, using p5js, html, on mobile</p>
-                <p>&nbsp</p>
-                <p>I made a website focusing the way people who see images on mobile can strongly engaged into 'seeing'.</p>
-                <p>The user has to shake strongly the mobile to see next image at phase 1 and 2.</p>
-                <p>In phase 3, the user has to scroll to see next one.</p>
-                <p>Especially, the infinite scrolling in phase 3 requires the user to continuously engage into the process of seeing.</p>
-                <p>&nbsp</p>
-                <p>&nbsp</p>
-                <p>&nbsp</p>
-                <!-- left side of the divided grid -->
-              </div>
-              <div class="col-md-6">
-                <h2>흔들기, 스크롤하기</h2>
-                <p>&nbsp</p>
-                <p>p5js, html, 모바일 기기</p>
-                <p>&nbsp</p>
-                <p>모바일을 통해 이미지를 관람하는 사람들이 보다 적극적으로 보는 행위에 참여할 수 있는 방식을 고민했다.</p>
-                <p>관람자는 1번과 2번 장에서 다음 이미지를 보기 위해 모바일 기기를 강하게 흔들어야한다.</p>
-                <p>3번 장에서는 다음 이미지를 보기 위해서 스크롤 해야한다.</p>
-                <p>특히 3번에서의 스크롤하기는 끝이 없는 무한대의 스크롤하기로 관람자의 끊임없는 참여를 요구한다.</p>
-                <p>&nbsp</p>
-                <p>&nbsp</p>
-                <!-- right side of the divided grid -->
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-images">
-            <div class="row">
-              <div class="col-md-3">
-                <!-- first image -->
-                <iframe src="https://player.vimeo.com/video/721389993?h=4bc1a32e54" width="300" height="564" style="margin-left:auto; margin-right:auto; margin-bottom:10; display:block" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="">
-                </iframe>
-              </div>
-              
-             
-            </div>
-          </div>
-          
-		
-	</div>
-	
-	<footer class="footer">
-		© 2023 Junyeol Baek
-	</footer>
-	
-	</div>
-	
+  <!-- Content -->
+  <main class="project-page">
+
+    <!-- Title -->
+    <header class="project-header">
+      <h1>Shake and Scroll</h1>
+      <p class="project-meta">2022 · Creative coding, p5.js, web, mobile</p>
+    </header>
+
+    <!-- English text -->
+    <section class="project-text">
+      <p>
+        <em>Shake and Scroll</em> is a mobile web project that focuses on how viewers
+        physically engage with images on their phones. Instead of passively swiping,
+        the work asks the user to “work” to see the next image.
+      </p>
+      <p>
+        In phases 1 and 2, the viewer must strongly shake their phone to move forward.
+        In phase 3, they have to scroll through an infinite sequence of images,
+        turning the familiar gesture of scrolling into a prolonged and slightly exhausting act.
+      </p>
+      <p>
+        By exaggerating everyday interactions like shaking and scrolling, the project highlights
+        how much of our visual experience is already choreographed by interfaces and devices.
+      </p>
+    </section>
+
+    <!-- Korean text -->
+    <section class="project-text project-text-kr">
+      <p>
+        <em>Shake and Scroll</em>은 모바일 화면에서 이미지를 관람하는 방식을 다시 생각해 보는
+        웹 작업입니다. 수동적으로 넘겨보는 대신, 다음 이미지를 보기 위해 관람자가
+        몸을 더 적극적으로 사용해야 합니다.
+      </p>
+      <p>
+        1, 2장에서는 다음 장면으로 넘어가기 위해 휴대폰을 강하게 흔들어야 하고,
+        3장에서는 끝이 보이지 않는 이미지를 스크롤하며 내려가야 합니다. 익숙한
+        스크롤 제스처를 과장함으로써, 우리가 이미 인터페이스와 기기들에 의해
+        안무되고 있다는 감각을 드러냅니다.
+      </p>
+    </section>
+
+    <!-- Video -->
+    <section class="project-images-column">
+      <div class="project-image-block">
+        <div style="width:85%; max-width:100%; aspect-ratio:9/16; position:relative; margin:0;">
+          <iframe
+            src="https://player.vimeo.com/video/721389993?h=4bc1a32e54"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%;"
+            title="Shake and Scroll — mobile interaction">
+          </iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2023 Junyeol Baek
+  </footer>
+
+</div>
 </body>
 </html>
