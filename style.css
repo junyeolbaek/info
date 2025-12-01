@@ -37,7 +37,8 @@ a:hover {
 ========================= */
 
 /* 메인 래퍼: 헤더가 fixed라서 위쪽 padding 넉넉히 */
-.site {
+.site,
+.container {                 /* 옛 구조(.container)도 같이 잡아줌 */
   max-width: 1040px;
   margin: 0 auto;
   padding: 100px 20px 40px; /* 헤더 높이만큼 위 패딩 + 좌우 여백 */
@@ -47,7 +48,9 @@ a:hover {
    HEADER (고정)
 ========================= */
 
-.site-header {
+/* 새로운 구조 .site-header, 예전 구조 .header 둘 다 fixed */
+.site-header,
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -64,7 +67,12 @@ a:hover {
   box-sizing: border-box;
 }
 
-.site-title a {
+/* 예전 .header 안에 #header_text / .main 같은 게 있더라도
+   flex 기준은 맨 상단 바(텍스트 줄)에만 쓰는 걸 추천.
+   (나중에 HTML 정리하면서 .site-header 구조로 맞추면 더 깔끔함) */
+
+.site-title a,
+#logo a {
   font-weight: 400;
   color: #f5f5f5;
 }
@@ -88,7 +96,8 @@ a:hover {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* 4열이 잘 나오도록 최소 폭을 줄임 (200px) */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
 
   /* 각 아이템을 가운데로 */
@@ -228,7 +237,8 @@ a:hover {
 
 @media (max-width: 800px) {
   /* 모바일/태블릿에서 헤더 정렬 */
-  .site-header {
+  .site-header,
+  .header {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
@@ -236,7 +246,8 @@ a:hover {
   }
 
   /* 헤더 높이 줄었으니 위 패딩 약간 줄이기 */
-  .site {
+  .site,
+  .container {
     padding: 80px 16px 32px;
   }
 
