@@ -1,11 +1,15 @@
-/* 기본 설정 */
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -14,41 +18,63 @@ body {
   font-family: "Gothic A1", "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  color: #f5f5f5;            /* 글자색 밝게 */
+  color: #f5f5f5;
   background-color: #000000; /* 전체 배경 검정 */
 }
 
-/* 사이트 전체 래퍼 */
-.site {
-  max-width: 1040px;
-  margin: 32px auto 40px;
-  padding: 0 20px;
+/* 링크 기본 */
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* HEADER */
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LAYOUT WRAPPER
+========================= */
+
+/* 메인 래퍼: 헤더가 fixed라서 위쪽 padding 넉넉히 */
+.site {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 100px 20px 40px; /* 헤더 높이만큼 위 패딩 + 좌우 여백 */
+}
+
+/* =========================
+   HEADER (고정)
+========================= */
+
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 32px;
+
+  padding: 20px 20px;
+  background-color: #000000;
+  border-bottom: 1px solid #111111;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .site-title a {
-  text-decoration: none;
-  color: #f5f5f5;
   font-weight: 400;
-}
-
-.site-title a:hover {
-  text-decoration: underline;
+  color: #f5f5f5;
 }
 
 .site-nav {
   font-size: 13px;
+  color: #aaaaaa;
 }
 
 .site-nav a {
-  text-decoration: none;
   color: #aaaaaa;
 }
 
@@ -56,51 +82,49 @@ body {
   text-decoration: underline;
 }
 
-/* PROJECT GRID */
+/* =========================
+   INDEX PAGE: PROJECT GRID
+========================= */
+
 .projects {
   display: grid;
-  /* auto-fit은 유지하되 각 칼럼은 260px 정도로 작게 */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 
-  /* 그리드 안의 아이템들을 가운데로 정렬 */
+  /* 각 아이템을 가운데로 */
   justify-items: center;
 }
 
-/* 각 프로젝트 카드 전체 링크 */
+/* 각 프로젝트 카드 */
 .project {
   display: block;
   text-decoration: none;
   color: inherit;
 
-  /* 카드 전체를 가운데 모으는 느낌을 위해 최대폭 제한 */
-  max-width: 260px;
+  max-width: 260px; /* 카드 전체 폭 제한 */
 }
 
-/* 이미지 박스 */
+/* 카드 안 이미지 래퍼 */
 .project-image {
   width: 100%;
   border: 1px solid #333333;
   background-color: #000000;
   overflow: hidden;
 
-  /* 내부 이미지 중앙 정렬 */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 실제 이미지 */
+/* 썸네일 이미지 */
 .project-image img {
   display: block;
   width: 100%;
   height: auto;
-
-  /* 혹시 너무 큰 원본일 경우를 대비한 안전장치 */
   max-width: 260px;
 }
 
-/* 캡션: 한 줄, 작은 글씨 */
+/* 캡션: 이미지 아래 한 줄 */
 .project-caption {
   margin-top: 6px;
   font-size: 11px;
@@ -108,13 +132,17 @@ body {
   text-align: left; /* 필요하면 center로 바꿔도 됨 */
 }
 
-/* hover 시 살짝만 변화 (과하지 않게) */
+/* hover 시 테두리만 살짝 */
 .project:hover .project-image {
   border-color: #666666;
 }
 
-/* FOOTER */
-.site-footer {
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer,
+.footer {
   margin-top: 40px;
   padding-top: 12px;
   border-top: 1px solid #333333;
@@ -123,20 +151,96 @@ body {
   text-align: left;
 }
 
-/* 모바일에서 여백 조금 조정 */
-@media (max-width: 600px) {
-  .site {
-    margin-top: 24px;
-    padding: 0 16px;
-  }
+/* =========================
+   PROJECT DETAIL PAGE
+========================= */
 
+/* 상세 페이지 전체 컬럼 (본문 영역) */
+.project-page {
+  max-width: 720px;         /* 텍스트 + 이미지가 공유하는 컬럼 폭 */
+  margin: 0 auto 40px;      /* 가운데 정렬 + 아래 여백 */
+}
+
+/* 제목 + 메타 */
+.project-header {
+  margin-bottom: 20px;
+}
+
+.project-header h1 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 4px;
+  color: #f5f5f5;
+}
+
+.project-meta {
+  font-size: 11px;
+  color: #999999;
+  margin: 0;
+}
+
+/* 설명 텍스트 (영문) */
+.project-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.project-text p {
+  margin: 0 0 8px;
+}
+
+/* 설명 텍스트 (한글) – 살짝 색 차이 */
+.project-text-kr {
+  margin-top: 16px;
+  color: #d0d0d0;
+}
+
+/* 이미지 컬럼: 텍스트 아래 세로로 쭉 */
+.project-images-column {
+  margin-top: 28px;
+}
+
+/* 각 이미지 블록 */
+.project-image-block {
+  margin: 0 0 20px;
+}
+
+/* 상세 이미지
+   - 텍스트와 좌측 정렬선 맞춤
+   - 폭 85% (데스크탑 기준)
+   - 여럿 이미지를 내려도 좌우 폭이 동일한 하나의 컬럼으로 보이게
+*/
+.project-detail-image {
+  display: block;
+  width: 85%;          /* 컬럼 대비 85% */
+  max-width: 100%;
+  height: auto;
+  margin: 0;           /* margin: 0 auto 제거 → 텍스트와 같은 왼쪽 라인 시작 */
+  border: 1px solid #333333;
+  background-color: #000000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  /* 모바일/태블릿에서 헤더 정렬 */
   .site-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
+    gap: 4px;
+    padding: 14px 16px;
   }
 
-  /* 모바일에서도 프로젝트는 한 컬럼 + 가운데 정렬 */
+  /* 헤더 높이 줄었으니 위 패딩 약간 줄이기 */
+  .site {
+    padding: 80px 16px 32px;
+  }
+
+  /* 프로젝트 그리드: 한 컬럼으로 줄이기 */
   .projects {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -145,5 +249,16 @@ body {
   .project {
     max-width: 260px;
     width: 100%;
+  }
+
+  /* 상세 페이지 */
+  .project-page {
+    max-width: 100%;
+    padding: 0 4px;
+    margin-bottom: 32px;
+  }
+
+  .project-detail-image {
+    width: 100%; /* 작은 화면에서는 컬럼 폭에 맞게 꽉 차게 */
   }
 }
