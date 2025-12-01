@@ -279,41 +279,42 @@ a:hover {
   }
 }
 /* =========================
-   INFO PAGE CLEAN TYPOGRAPHY
+   INFO PAGE
 ========================= */
 
 .info-page {
-  max-width: 1040px;   /* .site, .site-header랑 동일 폭 */
-  margin: 0 auto;
-  padding-top: 20px;   /* 헤더 아래 살짝 여백 */
+  max-width: 1040px;          /* 헤더(.site-header) / .site와 동일 폭 */
+  margin: 0 auto 40px;
+  padding-top: 40px;          /* 헤더 아래 여백 */
 }
 
+/* 기본 텍스트 스타일: 작고 담백하게 */
 .info-page p,
 .info-page li {
-  font-size: 12px;     /* 글자 조금 더 작게 (13 → 12) */
+  font-size: 12px;
   line-height: 1.5;
   color: #dcdcdc;
 }
 
-/* 소개 문단만 살짝 짧게, 하지만 왼쪽 정렬선은 같게 */
-.bio {
-  margin-bottom: 24px;
-  max-width: 640px;    /* 줄 길이만 줄이기 */
+/* 소개 문단 + 각 섹션 내용의 줄 길이만 줄이고,
+   왼쪽 라인은 헤더와 그대로 맞추기 위해 margin-left: 0;을 강제 */
+.info-page .bio,
+.info-page section {
+  max-width: 640px;           /* 줄 길이 제한 */
+  margin: 0 0 24px 0;         /* 왼쪽 여백 0 → 헤더와 라인 맞춤 */
 }
 
+/* 섹션 제목 */
 .info-page h3 {
-  margin: 24px 0 6px;
-  font-size: 11.5px;   /* 섹션 타이틀도 더 작게 */
+  margin: 0 0 6px 0;
+  font-size: 11.5px;
   font-weight: 400;
   color: #f0f0f0;
   text-transform: uppercase;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
 }
 
-.info-page section {
-  max-width: 640px;    /* 섹션 전체 줄 길이 제한 */
-}
-
+/* 리스트 스타일 */
 .info-page ul {
   list-style: none;
   margin: 0;
@@ -329,6 +330,7 @@ a:hover {
   border-bottom: none;
 }
 
+/* 링크 */
 .info-page a {
   color: #bbbbbb;
 }
