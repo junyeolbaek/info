@@ -121,7 +121,7 @@ a:hover {
 /* 카드 안 이미지 래퍼 */
 .project-image {
   width: 100%;
-  border: 1px solid #333333;
+  border: 0px solid #333333;
   background-color: #000000;
   overflow: hidden;
 
@@ -232,7 +232,7 @@ a:hover {
   max-width: 100%;
   height: auto;
   margin: 0;           /* margin: 0 auto 제거 → 텍스트와 같은 왼쪽 라인 시작 */
-  border: 1px solid #333333;
+  border: 0px solid #333333;
   background-color: #000000;
 }
 
