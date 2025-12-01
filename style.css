@@ -54,7 +54,11 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+
+  /* 내용 폭과 정렬을 이미지 그리드(.site / .container)와 맞추기 */
+  max-width: 1040px;
+  margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
@@ -66,6 +70,7 @@ a:hover {
   z-index: 1000;
   box-sizing: border-box;
 }
+
 
 /* 예전 .header 안에 #header_text / .main 같은 게 있더라도
    flex 기준은 맨 상단 바(텍스트 줄)에만 쓰는 걸 추천.
