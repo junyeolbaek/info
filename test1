@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>백준열 — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#fff;
+--fg:#0b0b0b;
+--muted:#666;
+--accent:#000;
+--max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+margin:0;
+font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+color:var(--fg);
+background:var(--bg);
+line-height:1.4;
+}
+
+
+/* Layout */
+.wrap{
+display:grid;
+grid-template-columns:200px 1fr;
+gap:48px;
+max-width:var(--max-width);
+margin:40px auto;
+padding:0 24px;
+align-items:start;
+}
+
+
+/* Left column - nav */
+.nav{
+position:sticky;
+top:40px;
+align-self:start;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+.nav a{
+text-decoration:none;
+color:var(--fg);
+font-weight:700;
+font-size:18px;
+letter-spacing:0.02em;
+}
+.nav small{
+display:block;
+margin-top:10px;
+color:var(--muted);
+font-weight:500;
+font-size:13px;
+}
+
+
+/* Right column - content */
+main{
+padding-bottom:120px;
+}
+
+
+header{margin-bottom:28px}
+.title{
+display:flex;
+gap:24px;
+align-items:center;
+flex-wrap:wrap;
+}
+.title h1{
+margin:0;
+font-size:clamp(28px, 6vw, 42px);
+letter-spacing:-0.01em;
+font-weight:800;
+}
+.title .meta{
+color:var(--muted);
+font-size:14px;
+}
+
+
+.bio{
+margin-top:18px;
+max-width:70ch;
+color:var(--fg);
+font-weight:400;
+</html>
