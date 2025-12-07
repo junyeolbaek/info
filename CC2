@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CC2 — AABB</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LS-L03.svg/2560px-LS-L03.svg.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="site">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-title"><a href="./index.html">Junyeol Baek</a></div>
+    <nav class="site-nav">
+      <a href="./info.html">About</a>
+      <span> / </span>
+      <a href="https://www.instagram.com/ju.nyol/" target="_blank" rel="noopener">Instagram↗</a>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main class="project-page">
+
+    <!-- Title -->
+    <header class="project-header">
+      <h1>CC2</h1>
+      <p class="project-meta">2025 · Book Design</p>
+    </header>
+
+    <!-- English text -->
+    <section class="project-text">
+      <p>CC is a publishing project by AABB that documents the activities of contemporary visual artists onto the medium of a book. 
+         This issue, CC2, introduces the work of Hyunjin Kim, Kiljong Park, Gunjung Lee, Particlefield, Kiwoong Choi, formless twins.</p>
+    </section>
+
+
+    
+
+    <!-- IMAGE -->
+    <section class="project-images-column">
+      <div class="project-image-block" style="width:85%; margin:0 auto;">
+        <img src="CC2_01.jpg" style="width:100%; display:block; margin-bottom:40px;">
+        <img src="CC2_02.jpg" style="width:100%; display:block; margin-bottom:40px;">
+        <img src="CC2_03.jpg" style="width:100%; display:block; margin-bottom:40px;">
+        <img src="CC2_04.jpg" style="width:100%; display:block; margin-bottom:40px;">
+      </div>
+    </section>
+
+
+    <!-- VIDEO -->
+    <section class="project-images-column">
+      <div class="project-image-block" style="width:85%; margin:0 auto;">
+        <div style="position:relative; padding-top:177.78%;"> 
+          <iframe 
+            src="https://player.vimeo.com/video/1142141785?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position:absolute; top:0; left:0; width:100%; height:100%;"
+            title="BBUL Invitation">
+          </iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+    </section>
+
+<p><br><strong>Credits</strong></p>
+        <span>Contributors:</br>
+        <span>Hyunjin Kim 김현진</br>
+        <span>Kiljong Park 박길종</br>
+        <span>Gunjung Lee 이건정</br>
+        <span>Particlefield 입자필드</br>
+        <span>Kiwoong Choi 최기웅</br>
+        <span>formless twins 폼레스 트윈즈</br>
+
+        <span></br>
+        <span>Published by AABB</br>
+        <span>Publisher: Jaewon Seok 석재원</br>
+        <span>Design: Junyeol Baek 백준열</br>
+        <span>Editing: Sorim Lee 이소림</br>
+        <span>Photography: Dohyun Park 박도현</br>
+
+
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2025 Junyeol Baek
+  </footer>
+
+</div>
+</body>
+</html>
